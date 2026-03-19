@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be Brave</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 900px;
+      padding: 20px;
+    }
+
+    .main-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 600;
+      color: #111;
+      line-height: 1.3;
+      letter-spacing: 1px;
+    }
+
+    .highlight {
+      color: #000;
+      position: relative;
+    }
+
+    .highlight::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      background: #000;
+      bottom: 5px;
+      left: 0;
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .sub-text {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #666;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    /* Smooth fade-in animation */
+    .container {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .main-text {
+        font-size: 2.2rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="main-text">
+      You Can Do <span class="highlight">Anything</span><br>
+      Because You Are <span class="highlight">Brave</span>
+    </div>
+
+    <div class="sub-text">
+      Fear is temporary. Courage defines you.
+    </div>
+  </div>
+
+</body>
+</html>
